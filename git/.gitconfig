@@ -1,6 +1,5 @@
 [user]
 	email = takatoshi.yamada@example.com
 	name = Takatoshi Yamada
-
-[includeIf "hasconfig:git/.gitconfig.local"]
-  path = ~/.gitconfig.local
+[include]
+	path = ~/.gitconfig.local

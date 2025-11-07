@@ -42,3 +42,10 @@ if [ -d "$ZFUNCDIR" ]; then
   fpath=("$ZFUNCDIR" $fpath)
   autoload -Uz $ZFUNCDIR/**/*.zsh(N)
 fi
+
+# ---- SSH Agent ----
+# WSL環境でkeychainが利用可能な場合のみ使用
+# WSLのターミナルセッションごとにSSH agentが独立しているケースへの対策
+if command -v keychain >/dev/null 2>&1; then
+  eval $(keychain --eval --quiet id_ed25519_tyamada)
+fi

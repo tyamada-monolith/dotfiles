@@ -9,15 +9,11 @@ WSL (Ubuntu) 向けの zsh ベース開発環境設定。
 ```bash
 sudo apt update
 sudo apt install -y \
-  zsh \
-  git \
   stow \
   fzf \
   zoxide \
   tree \
-  vim \
-  python3 \
-  python3-pip
+  keychain
 ```
 
 ## 初期セットアップ
@@ -63,6 +59,11 @@ zsh-abbr v6 以降は内部で zsh-job-queue を依存ライブラリとして�
 - fzfによる各種検索
 - zoxideによるディレクトリジャンプ (z <path>)
 - abbrによる短縮コマンド登録 (abbr -a gs 'git status')
+
+## keychain
+WSLでは各ターミナルセッションごとにssh-agentが独立してしまうため、毎回ssh-agentを登録しないといけない。
+その手間を省くため、keychainを利用する。
+最初の起動時だけパスワードを入力すれば、その後のセッションでは自動的に鍵が設定される。
 
 ## 備考
 
