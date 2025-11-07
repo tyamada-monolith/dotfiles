@@ -9,6 +9,7 @@ WSL (Ubuntu) 向けの zsh ベース開発環境設定。
 ```bash
 sudo apt update
 sudo apt install -y \
+  locales \
   stow \
   fzf \
   zoxide \
@@ -65,7 +66,31 @@ WSLでは各ターミナルセッションごとにssh-agentが独立してし�
 その手間を省くため、keychainを利用する。
 最初の起動時だけパスワードを入力すれば、その後のセッションでは自動的に鍵が設定される。
 
+## Node.js
+
+Node.jsは`nvm`(Node Version Manager)を用いる。
+nvmなのは暫定。
+
+```bash
+# nvm install
+# 終了後にsource ~/.zshrc
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# LTS版Nodeを導入
+nvm install --lts
+
+# バージョンを確認
+% node -v
+v24.11.0
+% npm -v
+11.6.1
+% nvm -v
+0.39.7
+```
+
 ## 備考
 
 - 外部プラグインは.gitignoreで済み
 - 秘匿ファイルや個別設定は .gitconfig.local / .zshrc.local に記述
+- 初回起動時に "manpath: can't set the locale" が出る場合は、下記のコマンドを実行
+  - `sudo locale-gen ja_JP.UTF-8 && sudo update-locale LANG=ja_JP.UTF-8`
