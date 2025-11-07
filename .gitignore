@@ -1,0 +1,35 @@
+# ------------------------------------------------------
+# 個人設定・秘密情報（コミットしない）
+# ------------------------------------------------------
+
+# Git のローカルオーバーライド
+.gitconfig.local
+
+# Zsh ローカル設定
+zsh/.zshrc.local
+zsh/.zshrc.*
+
+# 外部プラグイン (zsh-abbrなど)
+zsh/.zsh/plugins/
+
+# 秘密ファイル
+**/*.secret
+**/*.local
+
+# SSH / GPG / token / credential ファイルなど
+**/id_rsa*
+**/id_ed25519*
+**/token*
+**/credentials*
+**/secrets*
+
+# バックアップ・キャッシュ
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+
+# OSやエディタのゴミ
+.DS_Store
+Thumbs.db
