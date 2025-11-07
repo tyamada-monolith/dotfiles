@@ -15,7 +15,9 @@ sudo apt install -y \
   fzf \
   zoxide \
   tree \
-  vim
+  vim \
+  python3 \
+  python3-pip
 ```
 
 ## 初期セットアップ

@@ -32,7 +32,7 @@ fi
 
 # Abbreviation definitions
 ABBRCONF="$HOME/workspace_tyamada/dotfiles/zsh/.zsh/functions/abbr/abbr.zsh"
-[ -f "$ABBRCONF" ] && source "$ABBRCONF"
+[ -f "$ABBRCONF" ] && source "$ABBRCONF" >/dev/null 2>&1
 
 # ---- 関数ディレクトリ ----
 ZFUNCDIR="$HOME/workspace_tyamada/dotfiles/zsh/.zsh/functions"
