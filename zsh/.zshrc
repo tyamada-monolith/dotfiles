@@ -1,7 +1,6 @@
 # Created by newuser for 5.9
 
 # ---- 基本設定 ----
-export LANG=ja_JP.UTF-8
 export EDITOR=vim
 
 # ---- オプション ----
@@ -30,9 +29,10 @@ if [ -f "$HOME/workspace_tyamada/dotfiles/zsh/.zsh/plugins/zsh-abbr/zsh-abbr.plu
   source "$HOME/workspace_tyamada/dotfiles/zsh/.zsh/plugins/zsh-abbr/zsh-abbr.plugin.zsh"
 fi
 
-# Abbreviation definitions
-ABBRCONF="$HOME/workspace_tyamada/dotfiles/zsh/.zsh/functions/abbr/abbr.zsh"
-[ -f "$ABBRCONF" ] && source "$ABBRCONF" >/dev/null 2>&1
+# read .zsh
+for f in ~/.zsh/*.zsh; do
+  source "$f" >/dev/null 2>&1
+done
 
 # ---- 関数ディレクトリ ----
 ZFUNCDIR="$HOME/workspace_tyamada/dotfiles/zsh/.zsh/functions"

@@ -1,4 +1,4 @@
-# dotfiles/zsh/.zsh/functions/abbr/abbr.zsh
+# dotfiles/zsh/.zsh/abbr.zsh
 
 # ==========================================
 # ZSH Abbreviations Configuration
