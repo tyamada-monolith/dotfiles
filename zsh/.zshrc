@@ -37,15 +37,21 @@ done
 # ---- 関数ディレクトリ ----
 ZFUNCDIR="$HOME/workspace_tyamada/dotfiles/zsh/.zsh/functions"
 
-# 配下の .zsh ファイルをすべて autoload 登録
 if [ -d "$ZFUNCDIR" ]; then
   fpath=("$ZFUNCDIR" $fpath)
-  autoload -Uz $ZFUNCDIR/**/*.zsh(N)
+  # ※ autoload は「関数名」を渡す必要あり（拡張子を剥がす）
+  for f in "$ZFUNCDIR"/*.zsh(.N); do
+    autoload -Uz "${f:t:r}"
+  done
 fi
 
 # ---- SSH Agent ----
 # WSL環境でkeychainが利用可能な場合のみ使用
 # WSLのターミナルセッションごとにSSH agentが独立しているケースへの対策
+# 初回（WSLを起動した直後）の一回だけパスフレーズを聞かれる
+# その後のシェルでは聞かれなくなります。
 if command -v keychain >/dev/null 2>&1; then
-  eval $(keychain --eval --quiet id_ed25519_tyamada)
+  export SSH_KEYS=(~/.ssh/id_ed25519_tyamada)
+  eval "$(keychain --quiet --eval --agents ssh ${SSH_KEYS[@]})"
 fi
+
