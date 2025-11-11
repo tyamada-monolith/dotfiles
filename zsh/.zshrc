@@ -2,6 +2,7 @@
 
 # ---- 基本設定 ----
 export EDITOR=vim
+export WORKSPACE="$HOME/workspace_tyamada"
 
 # ---- オプション ----
 setopt hist_ignore_all_dups share_history autocd extendedglob
