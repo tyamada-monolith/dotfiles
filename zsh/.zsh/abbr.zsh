@@ -85,7 +85,7 @@ abbr -S nrds='npm run deploy:stg'
 abbr -S tok='to-kebab'
 abbr -S tmd='touch-md'
 abbr -S pdoc='pdoc'
-abbr -S run='./workspace_tyamada/tools/scripts/run.sh'
+abbr -S run='~/workspace_tyamada/tools/scripts/run.sh'
 
 # Release management
 # Usage: rel v1.2.1 "Description"

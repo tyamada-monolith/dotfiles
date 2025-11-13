@@ -39,10 +39,8 @@ done
 ZFUNCDIR="$HOME/workspace_tyamada/dotfiles/zsh/.zsh/functions"
 
 if [ -d "$ZFUNCDIR" ]; then
-  fpath=("$ZFUNCDIR" $fpath)
-  # ※ autoload は「関数名」を渡す必要あり（拡張子を剥がす）
   for f in "$ZFUNCDIR"/*.zsh(.N); do
-    autoload -Uz "${f:t:r}"
+    source "$f"
   done
 fi
 
