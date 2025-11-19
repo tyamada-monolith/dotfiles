@@ -43,14 +43,3 @@ if [ -d "$ZFUNCDIR" ]; then
     source "$f"
   done
 fi
-
-# ---- SSH Agent ----
-# WSL環境でkeychainが利用可能な場合のみ使用
-# WSLのターミナルセッションごとにSSH agentが独立しているケースへの対策
-# 初回（WSLを起動した直後）の一回だけパスフレーズを聞かれる
-# その後のシェルでは聞かれなくなります。
-if command -v keychain >/dev/null 2>&1; then
-  export SSH_KEYS=(~/.ssh/id_ed25519_tyamada)
-  eval "$(keychain --quiet --eval --agents ssh ${SSH_KEYS[@]})"
-fi
-
