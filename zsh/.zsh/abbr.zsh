@@ -44,7 +44,7 @@ abbr -S ga='git add'
 abbr -S gcm='git commit -m'
 abbr -S gd='git diff'
 abbr -S gdh='git diff HEAD'
-abbr -S grsh='git reset --soft HEAD^'
+abbr -S grsh='git reset --soft HEAD~1'
 
 # Remote operations
 abbr -S grv='git remote -v'
@@ -85,7 +85,7 @@ abbr -S nrds='npm run deploy:stg'
 abbr -S tok='to-kebab'
 abbr -S tmd='touch-md'
 abbr -S pdoc='pdoc'
-abbr -S run='~/workspace_tyamada/tools/scripts/run.sh'
+abbr -S run='python3 ~/workspace_tyamada/tools/scripts/run.py'
 
 # Release management
 # Usage: rel v1.2.1 "Description"
@@ -112,3 +112,11 @@ abbr -S vsp='code -r test.py'
 # 📄 Markdown / PDF
 # ------------------------------------------
 abbr -S m2p='md-to-pdf'
+
+# Docker
+abbr -S dc='docker compose'
+abbr -S dps='docker ps'
+abbr -S dcps='docker compose ps'
+abbr -S dcbu='docker compose build' # dcbは予約されていて不可
+abbr -S dcud='docker compose up -d'
+abbr -S dcd='docker compose down'
