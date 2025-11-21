@@ -21,6 +21,11 @@ abbr -S vs='code -r'
 abbr -S vabbr='vim ~/workspace_tyamada/dotfiles/zsh/.zsh/abbr.zsh'
 
 # ------------------------------------------
+# 📡 SSH
+# ------------------------------------------
+abbr -S ssa='[ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)" && ssh-add $HOME/.ssh/id_ed25519_tyamada || ssh-add $HOME/.ssh/id_ed25519_tyamada'
+
+# ------------------------------------------
 # 🧩 Git Commands
 # ------------------------------------------
 
@@ -52,9 +57,6 @@ abbr -S grso='git remote show origin'
 abbr -S gpo='git pull origin'
 abbr -S gp='git push'
 abbr -S gcl='git clone'
-
-# GitHub CLI
-abbr -S ghb='gh browse'
 
 # ------------------------------------------
 # 🔍 FZF Integration
