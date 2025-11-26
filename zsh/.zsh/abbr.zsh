@@ -23,7 +23,9 @@ abbr -S vabbr='vim ~/workspace_tyamada/dotfiles/zsh/.zsh/abbr.zsh'
 # ------------------------------------------
 # 📡 SSH
 # ------------------------------------------
-abbr -S ssa='[ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)" && ssh-add $HOME/.ssh/id_ed25519_tyamada || ssh-add $HOME/.ssh/id_ed25519_tyamada'
+
+abbr -S ssht = ssh -T git@github.com # ssh
+abbr -S ssa='[ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)" && ssh-add $HOME/.ssh/id_ed25519_tyamada || ssh-add $HOME/.ssh/id_ed25519_tyamada' # key
 
 # ------------------------------------------
 # 🧩 Git Commands
@@ -82,6 +84,7 @@ abbr -S clo='clasp-open'
 abbr -S nr='npm run'
 abbr -S nrd='npm run deploy:dev'
 abbr -S nrds='npm run deploy:stg'
+abbr -S nrf='npm run format' # prettier format
 
 # Custom utilities
 abbr -S tok='to-kebab'
@@ -120,5 +123,6 @@ abbr -S dc='docker compose'
 abbr -S dps='docker ps'
 abbr -S dcps='docker compose ps'
 abbr -S dcbu='docker compose build' # dcbは予約されていて不可
+abbr -S dcp='docker compose pull'
 abbr -S dcud='docker compose up -d'
 abbr -S dcd='docker compose down'
