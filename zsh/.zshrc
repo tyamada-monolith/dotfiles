@@ -43,3 +43,6 @@ if [ -d "$ZFUNCDIR" ]; then
     source "$f"
   done
 fi
+
+# Created by `pipx` on 2025-12-04 06:43:11
+export PATH="$PATH:/home/m2million/.local/bin"

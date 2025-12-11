@@ -11,6 +11,7 @@ abbr -S mkd='mkdir'
 abbr -S rmd='rmdir'
 abbr -S ll='ls -lah'
 abbr -S op='explorer.exe'
+abbr -S tf='tail -f'
 abbr -S so='source ~/.zshrc'
 abbr -S soz='source ~/.zshrc'   # alias duplication for convenience
 
@@ -38,6 +39,7 @@ abbr -S gbd='git branch -d'
 abbr -S gsw='git switch'
 abbr -S gswm='git switch main'
 abbr -S gswd='git switch dev'
+abbr -S gco='git checkout'
 abbr -S gcob='git checkout -b'
 
 # Status & Log
@@ -83,8 +85,10 @@ abbr -S clo='clasp-open'
 # Node.js
 abbr -S nr='npm run'
 abbr -S nrd='npm run deploy:dev'
+abbr -S nrdd='npm run deploy:dev'
 abbr -S nrds='npm run deploy:stg'
 abbr -S nrf='npm run format' # prettier format
+abbr -S npxtsp='npx ts-prune | grep -v "used in module" | grep -v "index.ts"'
 
 # Custom utilities
 abbr -S tok='to-kebab'
@@ -104,6 +108,7 @@ abbr -S fd='fdfind'
 abbr -S tr2d='tree -a -L 2 --dirsfirst'
 abbr -S tr2='tree -a -L 2'
 abbr -S tr3='tree -a -L 3'
+abbr -S nvd='nvidia-smi'
 
 # ------------------------------------------
 # 🐍 Python
