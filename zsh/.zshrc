@@ -46,3 +46,6 @@ fi
 
 # Created by `pipx` on 2025-12-04 06:43:11
 export PATH="$PATH:/home/m2million/.local/bin"
+
+# カーソルを強制的に点滅させる
+printf '\e[?12h'

@@ -69,6 +69,7 @@ abbr -S vf='vim $(fzf)'
 abbr -S gaf='git add $(git ls-files -m | fzf)'
 abbr -S cdf='cd $(find . -type d | fzf)'
 abbr -S abf='abbr | fzf'
+abbr -S hs='history | fzf'
 
 # ------------------------------------------
 # 🛠️ Development Tools
@@ -117,6 +118,7 @@ abbr -S py='python3'
 abbr -S python='python3'
 abbr -S pyt='python3 test.py'
 abbr -S vsp='code -r test.py'
+abbr -S venv='source .venv/bin/activate'
 
 # ------------------------------------------
 # 📄 Markdown / PDF
