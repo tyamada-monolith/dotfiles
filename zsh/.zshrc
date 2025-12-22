@@ -47,5 +47,17 @@ fi
 # Created by `pipx` on 2025-12-04 06:43:11
 export PATH="$PATH:/home/m2million/.local/bin"
 
+# Matrix 
+
+# プロンプト定義 (緑色で [ユーザー名@PC名 ディレクトリ] を表示)
+# %B = 太字, %F{green} = 緑文字, %f = 色リセット, %b = 太字解除
+PROMPT='%B%F{green}[%n@%m %~]%f%b'
+
+# lsコマンドの色設定（ディレクトリを太字の緑、実行ファイルを明るい緑になど）
+export LS_COLORS="di=01;32:ln=01;36:so=01;35:pi=33:ex=01;32:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;42"
+
+# lsを使った時に自動で色をつけるエイリアス
+alias ls='ls --color=auto'
+
 # カーソルを強制的に点滅させる
 printf '\e[?12h'

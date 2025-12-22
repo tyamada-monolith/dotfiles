@@ -19,6 +19,7 @@ abbr -S soz='source ~/.zshrc'   # alias duplication for convenience
 # ✍️ Editor & Config Files
 # ------------------------------------------
 abbr -S vs='code -r'
+abbr -S vz='vim ~/workspace_tyamada/dotfiles/zsh/.zshrc'
 abbr -S vabbr='vim ~/workspace_tyamada/dotfiles/zsh/.zsh/abbr.zsh'
 
 # ------------------------------------------
@@ -95,7 +96,7 @@ abbr -S npxtsp='npx ts-prune | grep -v "used in module" | grep -v "index.ts"'
 abbr -S tok='to-kebab'
 abbr -S tmd='touch-md'
 abbr -S pdoc='pdoc'
-abbr -S run='python3 ~/workspace_tyamada/tools/scripts/run.py'
+abbr -S run='python3 ~/workspace_tyamada/daily-startup/run.py'
 
 # Release management
 # Usage: rel v1.2.1 "Description"
@@ -133,3 +134,11 @@ abbr -S dcbu='docker compose build' # dcbは予約されていて不可
 abbr -S dcp='docker compose pull'
 abbr -S dcud='docker compose up -d'
 abbr -S dcd='docker compose down'
+
+# fun
+abbr -S cm='cmatrix -b -a -s'
+abbr -S cm2='wt.exe -w new wsl cmatrix -b -a -s'
+abbr -S clock='tty-clock -c -C 2'
+abbr -S tcl='tty-clock -c -C 2'
+abbr -s bt='btop'
+
