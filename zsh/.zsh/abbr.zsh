@@ -134,11 +134,13 @@ abbr -S dcbu='docker compose build' # dcbは予約されていて不可
 abbr -S dcp='docker compose pull'
 abbr -S dcud='docker compose up -d'
 abbr -S dcd='docker compose down'
+abbr -S dcupd=' docker compose down && docker compose pull && docker compose up -d'
 
 # fun
 abbr -S cm='cmatrix -b -a -s'
 abbr -S cm2='wt.exe -w new wsl cmatrix -b -a -s'
 abbr -S clock='tty-clock -c -C 2'
 abbr -S tcl='tty-clock -c -C 2'
-abbr -s bt='btop'
+abbr -S bt='btop'
+abbr -S spl='wt.exe -w 0 sp -H -s 0.4 \; mf first \; sp -V -s 0.6\; mf first \; sp -H \; mf first'
 
